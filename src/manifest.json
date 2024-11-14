@@ -1,0 +1,36 @@
+{
+    "name": "AzureUpdatesLinkCopyExtension",
+    "author": "kosmosebi",
+    "version": "0.1",
+    "manifest_version": 3,
+    "description": "Send Azure Updates permalink and title to clipboard",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://azure.microsoft.com/en-us/updates*"
+            ],
+            "js": [
+                "index.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "commands": {
+        "copy-title-and-url": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+C"
+            },
+            "description": "Copy url and title"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "clipboardWrite",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://azure.microsoft.com/en-us/updates*"
+    ]
+}
