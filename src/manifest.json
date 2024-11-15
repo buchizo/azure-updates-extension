@@ -7,7 +7,8 @@
     "content_scripts": [
         {
             "matches": [
-                "https://azure.microsoft.com/en-us/updates*"
+                "https://azure.microsoft.com/en-us/updates*",
+                "https://azure.microsoft.com/ja-jp/updates*"
             ],
             "js": [
                 "index.js"
@@ -31,6 +32,7 @@
         "activeTab"
     ],
     "host_permissions": [
-        "https://azure.microsoft.com/en-us/updates*"
+        "https://azure.microsoft.com/en-us/updates*",
+        "https://azure.microsoft.com/ja-jp/updates*"
     ]
 }
