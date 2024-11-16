@@ -6,5 +6,5 @@ https://azure.microsoft.com/en-us/updates なページ上で `Ctrl+Shift+C` す�
 
 - 拡張機能の開発者モードをOnにして `src` フォルダを指定して展開する。
 - キーボードショートカットを割り当てる
-  ![alt text](image.png)
+  ![alt text](./docs/images/shortcut.png)
 
