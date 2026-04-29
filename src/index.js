@@ -54,6 +54,7 @@ const body_observer = new MutationObserver(function (mutations) {
           function () {},
           function () {}
         );
+        return false;
       }
     });
   }
