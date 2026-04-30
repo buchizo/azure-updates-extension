@@ -36,13 +36,13 @@ const body_observer = new MutationObserver(function (mutations) {
       const b2 = document.createElement("a");
       b2.innerText = "copy link";
       b2.id = `copybtn-${id}`;
-      b2.href = `#${b2.id}`;
+      b2.href = `javascript:void(0)`;
 
       shares.appendChild(b1);
       shares.appendChild(b2);
 
       const tb2 = document.getElementById(b2.id);
-      tb2.onclick = function() {
+      tb2.onclick = function(e) {
         const body = `<html><body><!--StartFragment--><a href="${url}">${title}</a><!--EndFragment--></body></html>`;
         const plain = `${title} ${url}`;
     
@@ -54,6 +54,7 @@ const body_observer = new MutationObserver(function (mutations) {
           function () {},
           function () {}
         );
+        e.preventDefault();
         return false;
       }
     });
